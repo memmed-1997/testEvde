@@ -1,0 +1,47 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="ekran" style="background-color: blue; color: burlywood;width: auto ;height: 50px;"></p>
+        <div>
+            <button onclick = "tek()">tek</button>
+            <button onclick="cut()">cut</button>
+        </div>
+
+        <script>
+        function tek() {
+            tek = ["1","2","3","4","5","6","7","8"];
+            var tekler="";
+            for (i = 0; i < tek.length; i++) {
+                if (i ==1) {
+                    tekler= "" + tek[i];
+                    
+                }else if (i !=tek.length -1) {
+                    tekler = tekler + "," + tek[i++];
+
+                    
+                }
+                
+                 document.getElementById("ekran").innerHTML = tekler;
+                
+            }
+            
+        }
+        function cut(){
+            cut =["1","2","3","4","5","6","7","8"];
+            var cutler="";
+            for (i=1; i<cut.length; i++){
+                if(i==0){
+                    cutler= "" +cut[i];
+                }else if (i !=cut.length+1){
+                    cutler = cutler + "," + cut[i++];
+
+                }
+                document.getElementById("ekran").innerHTML = cutler;
+            }
+        }
+
+        </script>
+    </body>
+</html>
