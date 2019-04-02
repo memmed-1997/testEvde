@@ -5,27 +5,32 @@
     <body>
         <p id="ekran" style="background-color: blue; color: burlywood;width: auto ;height: 50px;"></p>
         <div>
-            <button onclick = "tek()">tek</button>
+            <button onclick ="tek()">tek</button>
             <button onclick="cut()">cut</button>
+            <button onclick="max()">maximum</button>
         </div>
 
         <script>
-        function tek() {
-            tek = ["1","2","3","4","5","6","7","8"];
-            var tekler="";
-            for (i = 0; i < tek.length; i++) {
-                if (i ==1) {
-                    tekler= "" + tek[i];
-                    
-                }else if (i !=tek.length -1) {
-                    tekler = tekler + "," + tek[i++];
 
-                    
+        
+        function tek() {
+            tek = ["1sdjkaf","2sdfjs","3gkj","4pgklp","5polpl","6jfsdkj","7idsfi","8qwuye3y0"];
+            var tekler="";
+            for (i = 0; i < tek.length; i++)
+            {
+                if (i%2==0)
+                {
+                    if(i==0)
+                    {
+                      tekler= tekler + tek[i];
+                    }
+                    else
+                    {
+                        tekler= tekler+"," + tek[i];
+                    }
                 }
-                
-                 document.getElementById("ekran").innerHTML = tekler;
-                
             }
+            document.getElementById("ekran").innerHTML = tekler;
             
         }
         function cut(){
@@ -38,8 +43,37 @@
                     cutler = cutler + "," + cut[i++];
 
                 }
+                else
+                {
+
+                }
                 document.getElementById("ekran").innerHTML = cutler;
             }
+        }
+        function max(){
+            max = ["20","25","15","99","74"];
+            var maximum =max[0];
+           for (i = 0; i < max.length; i++) {
+               if(maximum<max[i+1])
+               {
+                   maximum= max[i+1];
+               }
+               
+               
+           }
+           document.getElementById("ekran").innerHTML = maximum;
+        }
+        function max(){
+            max = [20,25,15,99,74];
+            var cemi=0;
+           for (i = 0; i < max.length; i++) {
+              cemi= cemi + max[i]
+               //1.cemi=20
+               //2.cemi=20+25=45
+               //3.cemi=45+15=60
+            //4.cemi=60+99=
+           }
+           document.getElementById("ekran").innerHTML = cemi;
         }
 
         </script>
